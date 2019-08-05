@@ -1,0 +1,70 @@
+/* Dashboard */
+
+html, body {
+	height: 100%;
+}
+
+h1 {
+	margin-top: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+div#accountdata {
+	
+	background-color: #444;
+	color: #fff;
+
+	float: left;
+	width: 400px;
+	height: 100%;
+}
+
+div#accountdata-inner {
+	margin-left: 50px;
+}
+
+
+#accountoptions ul {
+	padding: 0;
+	
+	list-style-type: none;
+}
+
+#accountoptions li {
+	cursor: pointer;
+}
+
+
+#dashboard {
+	margin-left: 50px;
+}
+
+
+.questentry {
+	border: 1px solid black;
+}
+
+.questentry h3 {
+	margin-bottom: 2px;
+}
+
+.questentry p {
+	margin: 0 0 0 20px;
+}
+
+
+@media only screen and (max-width: 940px) {
+	div#accountdata {
+		float: none;
+		width: 100%;
+		height: 300px;
+	}
+
+	div#accountdata-inner {
+		margin: auto;
+		width: 300px;
+	}
+}

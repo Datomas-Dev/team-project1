@@ -1,0 +1,80 @@
+/*
+	Base stylesheet for all pages
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Metamorphous&display=swap');
+
+* {
+	font-family: 'Alegreya', serif;
+}
+
+body {
+	background-color: #fbce6a;
+ 	margin: 0;
+ 	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Metamorphous', serif;
+	font-weight: 400;
+}
+
+button, input[type="submit"] {
+	cursor: pointer;
+}
+
+input {
+	/*
+	color: white;
+	background-color: #333;
+	*/
+	border: 1px solid #666;
+	border-radius: 5px;
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+input[type="submit"] {
+	
+}
+
+input:not([type="submit"]):focus {
+	outline: none;
+	background-color: #fdffbd;
+	/*border-width: 1px;*/
+	border-color: #f82;
+}
+
+/*
+input:not([type="submit"]):valid {
+	border-color: green;
+}
+
+input:not([type="submit"]):invalid {
+	border-color: red;
+}
+*/
+button {
+	cursor: pointer;
+	color: white;
+	background-color: red;
+	border: 1px solid white;
+	border-radius: 10px;
+	font-size: 1.2em;
+}
+
+
+
+/* quest editor */
+
+#queststeps li:hover {
+	background-color: red;
+}
+
+.stepli {
+	
+}
+
+.stepSelected {
+	background-color: lightgray;
+}

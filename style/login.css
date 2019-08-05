@@ -1,0 +1,44 @@
+
+#logo-login {
+	background-image: url('../image/logo-text.png');
+	width: 600px;
+	height: 200px;
+	margin: auto;
+}
+
+#formcontainer {
+	background-color: #fff;
+	border: 1px solid #888;
+	border-radius: 20px;
+	width: 400px;
+	margin: auto;
+}
+
+#formcontainer input:not([type="checkbox"]):not([type="submit"]) {
+	height: 50px;
+	margin: 5px 0px;
+	padding: 5px;
+	
+	font-size: 28px;
+}
+
+.innercontent {
+	margin: 5px;
+}
+
+.form-off {
+	display: none;
+}
+
+p.formswitcher {
+	color: #333;
+	cursor: pointer;
+}
+
+p.formswitcher:hover {
+	color: #88f;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+	width: 100%;
+}

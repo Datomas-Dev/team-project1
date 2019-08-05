@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Quest Editor</title>
+	<!-- <link rel="stylesheet" type="text/css" href="style/reset.css"> -->
+	<link rel="icon" type="image/png" href="../image/logo-icon.png" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="../style/base.css">
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/questeditor.js" defer></script>
+	<script type="text/javascript">
+		if(!isUserLoggedIn()) location = "login.html";
+	</script>
+</head>
+<body>
+
+	<form id="editquest">
+		<!-- <h3>Icon: </h3> -->
+		
+		<h3>What will you name this Quest?</h3>
+		<input type="text" maxlength="40" name="edit-name" id="edit-name">
+
+		<h3>Describe this Quest in detail:</h3>
+		<input type="textarea" maxlength="200" name="edit-description" id="edit-description">
+
+		<!-- 
+		<p>Is this a recurring Quest?</p>
+		<input type="checkbox" name="edit-recurring" id="edit-recurring">
+	 	-->
+
+		<div id="edit-resetblock">
+			<h3>When should this Quest reset?</h3>
+		
+			<input type="radio" name="edit-reset" id="edit-reset-d">
+			<label for="edit-reset-d">Daily</label>
+			<input type="radio" name="edit-reset" id="edit-reset-w">
+			<label for="edit-reset-w">Weekly</label>
+			<input type="radio" name="edit-reset" id="edit-reset-m">
+			<label for="edit-reset-m">Monthly</label>
+			<!-- Daily -->
+			<!-- Weekly -->
+			<!-- Monthly -->
+		</div>
+	</form>
+
+	<!-- <h3>What is the deadline for this Quest?</h3> -->
+
+	<div id="edit-steps">
+		<h3>Define the Steps to complete this Quest:</h3>
+		<div id="edit-steps-addstep" title="Add a Step" onclick="addQuestStep();">+</div>
+		<div id="edit-steps-deletestep" title="Delete a Step">-</div>
+		<ul id="queststeps">
+		</ul>
+	</div>
+
+	<p>This Quest will reward:</p>
+
+	<p>Quest rewards are determined by the amount of steps in the Quest, the difficulty of each step, and how often the Quest resets.</p>
+
+	<button onclick="validateQuest()">Create Quest!</button>
+	<button onclick="location = 'dashboard.html'">Cancel</button>
+
+</body>
+</html>

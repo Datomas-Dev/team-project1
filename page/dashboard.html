@@ -1,0 +1,126 @@
+<!-- 
+
+	Welcome to your Questic Dashboard! Here, you can create and manage Quests to complete, view your progress and visit the Shop to buy items and head to the Killing Fields to battle monsters!
+
+	Come back every day to
+
+
+	Quests are essentially to-do lists.
+
+
+	My Quest Book
+	Active Quests
+
+	My Quests
+		Create a new Quest
+
+
+	Quest Log
+
+	New Quest
+		Quest Name
+		What will you call this quest?
+
+		Quest Summary
+
+		Set Recurring Quest
+			Change
+
+		Quest Steps
+			Define a set of objectives to complete this quest.
+
+
+		Shop
+		Buy Items
+
+		Battle
+
+
+
+
+
+	You have missed the deadline for this Quest.
+	You have completed this Quest.
+	It will reset in {[amt] month(s), } {[amt] week(s), }  {[amount] days|tomorrow}.
+
+
+
+	Use your Battle Tokens to enter the Killing Fields
+
+	Defeating monsters grants no EXP, only being productive and finishing Quests does!
+
+
+
+
+	MOBILE DESIGN
+
+	Stats and user info on upepr div, everything else below
+
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Your Dashboard</title>
+	<link rel="icon" type="image/png" href="../image/logo-icon.png" sizes="32x32">
+	<!-- <link rel="stylesheet" type="text/css" href="style/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="../style/base.css">
+	<link rel="stylesheet" type="text/css" href="../style/dashboard.css">
+	<script type="text/javascript" src="../js/script.js"></script>
+	<script type="text/javascript" src="../js/dashboard.js" defer></script>
+	<script type="text/javascript">
+		if(!isUserLoggedIn()) location = "login.html";
+	</script>
+</head>
+<body>
+	<div id="accountdata">
+		<div id="accountdata-inner">
+			<h1 id="userdata-username"></h1>
+			<h2>Level <span id="userdata-level"></span></h2>
+			<div id="expbar-outer"></div>
+			
+			<p>Gold: <span id="userdata-gold"></span></p>
+
+			<div id="accountoptions">
+				<ul>
+					<li>Account Settings</li>
+					<a onclick="logOutUser(); location = 'login.html';"><li>Log Out</li></a>
+				</ul>
+			</div>
+			<div>
+				Account created on: 
+			</div>
+		</div>
+	</div>
+
+	<div id="dashboard">
+		<h1>My Quest Book</h1>
+		<!-- My Quest Book -->
+			<!-- Your Q Quests: Your journey is done -->
+
+		<!-- User Created List of Quests -->
+		<button onclick="location = 'questeditor.html'">Create A New Quest</button>
+
+		<h2>Active Quests</h2>
+		<ul id="questlist">
+			<!-- No active quests. Take a breather! -->
+		</ul>
+		
+		<h2>Completed Quests</h2>
+	</div>
+	<div id="questwindow">
+		<h2 id="questname"></h2>
+		<h4 id="questdescription"></h4>
+	</div>
+
+
+
+
+
+	<div id="accountsettings">
+		
+	</div>
+
+</body>
+</html>

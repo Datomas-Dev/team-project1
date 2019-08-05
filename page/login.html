@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Questic - Log In</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../style/reset.css"> -->
+	<link rel="icon" type="image/png" href="../image/logo-icon.png" sizes="32x32">
+	<link rel="stylesheet" type="text/css" href="../style/base.css"/>
+	<link rel="stylesheet" type="text/css" href="../style/login.css"/>
+	<script type="text/javascript" src="../js/script.js"></script>
+</head>
+<body>
+
+	<div id="logo-login"></div>
+
+	<div id="formcontainer">
+		<div id="loginform-container" class="innercontent">
+			<form id="loginform" name="loginform">
+				<h2>Log In</h2>
+				<label for="username"></label>
+				<input type="text" name="username" placeholder="Username" required>
+				
+				<label for="password"></label>
+				<!-- ([a-z]+\d+){8,} -->
+				<input type="password" name="password" placeholder="Password" required>
+				<br/>
+				<input type="submit" name="login" id="login" value="Log In" formmethod="get">
+			</form>
+			<p onclick="showSignupForm();" class="formswitcher">Create a New Account</p>
+		</div>
+
+		<div id="signupform-container" class="innercontent form-off">
+			<form id="signupform">
+				<h2>Create a New Account</h2>
+				<label for="username"></label>
+				<!-- pattern="(\w){4,}" -->
+				<input type="text" name="username" placeholder="Username" required>
+				<br/>
+				<label for="email"></label>
+				<input type="email" name="email" id="email" placeholder="E-Mail" required>
+				
+				<label for="password"></label>
+				<!-- pattern="([a-z]+\d+){8,}" -->
+				<!-- pattern="(.){8,}" -->
+				<input type="password" name="password" placeholder="Password" required>
+				
+				<label for="passwordconfirm"></label>
+				<input type="password" name="passwordconfirm" placeholder="Confirm Password" required>
+				
+				<input type="checkbox" name="termsbox" id="termsbox" required>
+				<label for="termsbox">I agree to the <a style="cursor: pointer;">Terms and Conditions</a>.</label>
+				<br/>
+				<input type="submit" name="submit" id="submit" value="Create Account" formmethod="get">
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		document.getElementById("login").addEventListener("click",function(e) {
+			e.preventDefault();
+			//alert(e.defaultPrevented);
+			validateLogin();
+		});
+
+		document.getElementById("submit").addEventListener("click",function(e) {
+			e.preventDefault();
+			//alert(e.defaultPrevented);
+			validateSignup();
+		});
+
+		function showSignupForm() {
+			document.getElementById("loginform-container").classList.add("form-off");
+			document.getElementById("signupform-container").classList.remove("form-off");
+		}
+	</script>
+</body>
+</html>
